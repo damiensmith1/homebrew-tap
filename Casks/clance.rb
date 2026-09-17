@@ -1,6 +1,6 @@
 cask "clance" do
-  version "0.1.4"
-  sha256 "fc9ea308cdf6ca6a643f668b46f80ff73d6980adda030f91eb0f6a98325e8d1e"
+  version "0.2.0"
+  sha256 "f9e77f2f8db003537fca7fe053c59d4a92933387a542db8072dcc31e1d2e58c0"
 
   url "https://github.com/damiensmith1/clance/releases/download/v#{version}/Clance-#{version}-arm64.zip"
   name "Clance"
@@ -10,7 +10,7 @@ cask "clance" do
   # Electron's own floor is macOS 13 (LSMinimumSystemVersion in the bundled
   # framework). whisper.cpp is the dictation engine: Clance resolves
   # whisper-cli from Homebrew's prefix rather than bundling it — see
-  # docs/dictation.md, "Engine distribution".
+  # docs/design.md, "Engine".
   depends_on arch: :arm64
   depends_on formula: "whisper.cpp"
   depends_on macos: :ventura
